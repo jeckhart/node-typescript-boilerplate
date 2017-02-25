@@ -1,12 +1,7 @@
 import {Configuration, ContextReplacementPlugin} from 'webpack';
-import * as path from 'path';
 import * as WebpackNotifierPlugin from 'webpack-notifier';
 
-const ROOT = path.resolve(__dirname, '..');
-
-function root(...args: any[]): string {
-  return path.join(ROOT,...args);
-}
+import {root} from './helpers';
 
 const config: Configuration = {
   target: 'node',
@@ -18,7 +13,7 @@ const config: Configuration = {
   // Output the bundled JS to dist/app.js
   output: {
     filename: 'app.js',
-    path: path.resolve('dist')
+    path: root('dist')
   },
   resolve: {
     // Look for modules in .ts(x) files first, then .js(x)
@@ -45,7 +40,7 @@ const config: Configuration = {
   plugins: [
     new ContextReplacementPlugin(
       /express(\\|\/)lib/,
-      path.join(ROOT,'node_modules'),
+      root('node_modules'),
       {
         // Add view engines here. NOTE: these probably want to use a loader anyway, YMMV
         // 'ejs': 'ejs'
