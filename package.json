@@ -4,7 +4,8 @@
   "description": "A tiny boilerplate node server using typescript, webpack, and express",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node -P config ./node_modules/.bin/webpack --config config/webpack.config.ts",
+    "build:dev": "npm run clean:dist && ts-node -P config ./node_modules/.bin/webpack --config config/webpack.config.ts --progress --profile",
+    "build": "npm run build:dev",
     "clean:dist": "npm run rimraf -- dist",
     "clean": "npm cache clean && npm run rimraf -- node_modules dist",
     "rimraf": "rimraf",
