@@ -1,5 +1,7 @@
 'use strict';
 
+import 'source-map-support/register'
+
 // Load environment variables from file if present
 import dotenv from 'dotenv';
 dotenv.config({silent: true});

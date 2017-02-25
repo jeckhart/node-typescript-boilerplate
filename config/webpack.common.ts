@@ -1,11 +1,9 @@
 import {Configuration, ContextReplacementPlugin} from 'webpack';
-import * as WebpackNotifierPlugin from 'webpack-notifier';
 
 import {root} from './helpers';
 
-const config: Configuration = {
+export const config: Configuration = {
   target: 'node',
-  devtool: 'eval',
   // This will be our app's entry point (webpack will look for it in the 'src' directory due to the modulesDirectory setting below). Feel free to change as desired.
   entry: [
     'server.ts'
@@ -46,8 +44,6 @@ const config: Configuration = {
         // 'ejs': 'ejs'
       }
     ),
-    // Set up the notifier plugin - you can remove this (or set alwaysNotify false) if desired
-    new WebpackNotifierPlugin({ alwaysNotify: true }),
   ],
   node: {
     __dirname: true
