@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "npm run clean:dist && ts-node -P config ./node_modules/.bin/webpack --config config/webpack.config.ts --progress --profile",
     "build": "npm run build:dev",
-    "clean:dist": "npm run rimraf -- dist",
+    "clean:dist": "npm run rimraf -- dist ts-build",
     "clean": "npm cache clean && npm run rimraf -- node_modules dist",
     "rimraf": "rimraf",
     "server:dev": "nodemon --watch dist dist/app.js",
