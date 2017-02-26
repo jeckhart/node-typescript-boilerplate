@@ -1,6 +1,6 @@
-import {Configuration} from 'webpack';
-import * as merge from 'webpack-merge';
-import * as WebpackNotifierPlugin from 'webpack-notifier';
+import {Configuration} from 'webpack'
+import * as merge from 'webpack-merge'
+import * as WebpackNotifierPlugin from 'webpack-notifier'
 
 import {config as commonConfig} from './webpack.common'
 

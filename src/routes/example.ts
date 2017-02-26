@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
 // Test routes
-import { Router } from 'express';
-import { health, ping } from '../controllers/example';
+import { Router } from 'express'
+import { health, ping } from '../controllers/example'
 
-let router = Router();
-router.get('/health', health);
-router.get('/ping', ping);
+let router = Router()
+router.get('/health', health)
+router.get('/ping', ping)
 
-export default router;
+export default router
