@@ -16,6 +16,21 @@ const config: Configuration = {
     devtoolModuleFilenameTemplate: '[resource-path]',
     pathinfo: true
   },
+  module: {
+    rules: [
+       {
+         test: /\.ts$/,
+         use: [
+           {
+             loader: 'tslint-loader',
+             options: {
+               configFile: 'tslint.json',
+             },
+           },
+         ],
+       },
+     ],
+  },
   plugins: [
     // Set up the notifier plugin - you can remove this (or set alwaysNotify false) if desired
     new WebpackNotifierPlugin({ alwaysNotify: true }),
