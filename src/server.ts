@@ -1,6 +1,6 @@
 'use strict'
 
-import 'source-map-support/register'
+import './polyfill'
 
 // Load environment variables from file if present
 import dotenv from 'dotenv'
