@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
     "noImplicitAny": false,
     "sourceMap": true,
     "outDir": "ts-build",

@@ -1,4 +1,3 @@
-'use strict'
 
 // Include dependencies
 import * as express from 'express'

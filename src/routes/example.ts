@@ -1,4 +1,3 @@
-'use strict'
 
 // Test routes
 import { Router } from 'express'
