@@ -1,13 +1,22 @@
 
 import { Request, Response } from 'express'
+import { Controller, Get, TYPE, interfaces } from 'inversify-express-utils'
+import { provideNamed } from '../ioc/ioc'
 
-/*
-  * Return an empty 200 response
-  */
-export function health (req: Request, res: Response) {
-  res.json({status: 'ok'}).end()
-}
+@provideNamed(TYPE.Controller, 'ExampleController')
+@Controller('/')
+export class ExampleController implements interfaces.Controller {
+  /*
+   * Return an empty 200 response
+   */
+  @Get('health')
+  public health (req: Request, res: Response) {
+    res.json({status: 'ok'}).end()
+  }
 
-export function ping (req: Request, res: Response) {
-  res.send('pong').end()
+  @Get('ping')
+  public ping (): string {
+    return 'pong'
+  }
+
 }

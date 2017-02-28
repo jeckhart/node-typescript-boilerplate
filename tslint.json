@@ -3,16 +3,15 @@
     "tslint:recommended"
   ],
   "rules": {
-    "trailing-comma": [false, {"multiline": "always", "singleline": "never"}],
+    "max-line-length": [
+      true,
+      140
+    ],
     "no-console": [
       true,
       "time",
       "timeEnd",
       "trace"
-    ],
-    "max-line-length": [
-      true,
-      140
     ],
     "no-string-literal": false,
     "no-use-before-declare": true,
@@ -24,6 +23,7 @@
       "avoid-escape"
     ],
     "semicolon": [true, "never"],
+    "trailing-comma": [false, {"multiline": "always", "singleline": "never"}],
     "variable-name": [
       true,
       "allow-leading-underscore",

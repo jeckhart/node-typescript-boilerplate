@@ -4,7 +4,7 @@ import * as sinon from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { Response } from 'express'
 
-import {health, ping} from './example'
+import {ExampleController} from './example'
 
 chai.use(sinonChai)
 const expect = chai.expect
@@ -17,8 +17,10 @@ describe('health', () => {
     end: sinon.stub()
   } as any as Response
 
+  const controller = new ExampleController()
+
   it('should return ok', () => {
-    health(null, res)
+    controller.health(null, res)
     chai.expect(res.json).calledWithExactly({status: 'ok'})
     chai.expect(res.end).to.have.been.called
   })
@@ -27,15 +29,10 @@ describe('health', () => {
 
 describe('ping', () => {
 
-  const res: Response = {
-    send: sinon.stub().returnsThis(),
-    json: sinon.stub().returnsThis(),
-    end: sinon.stub()
-  } as any as Response
+  const controller = new ExampleController()
 
   it('should return pong', () => {
-    ping(null, res)
-    chai.expect(res.send).calledWithExactly('pong')
+    chai.expect(controller.ping()).equals('pong')
   })
 
 })

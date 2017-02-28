@@ -2073,6 +2073,26 @@ invariant@^2.2.0:
   dependencies:
     loose-envify "^1.0.0"
 
+inversify-binding-decorators@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/inversify-binding-decorators/-/inversify-binding-decorators-3.0.0.tgz#3784d5ab9ea675915dfff4711434da4b27b78521"
+
+inversify-express-utils@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/inversify-express-utils/-/inversify-express-utils-3.2.0.tgz#db6704b167d43a0d37355f836b6bfeb6a79302b6"
+  dependencies:
+    express "^4.14.1"
+
+inversify-logger-middleware@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/inversify-logger-middleware/-/inversify-logger-middleware-3.0.0.tgz#ded2c8c6055828255cd599dfec68faf1eb999ec3"
+  dependencies:
+    chalk "^1.1.3"
+
+inversify@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/inversify/-/inversify-3.1.0.tgz#820571ddf52e7d8f875a5de15de3468319b86f80"
+
 invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"

@@ -16,10 +16,28 @@ describe('health', () => {
     })
   })
 
-  it('should have a message prop', () => {
+  it('should return a status of ok', () => {
     return chai.request(app).get('/health')
     .then((res) => {
       expect(res.body.status).to.eql('ok')
+    })
+  })
+
+})
+
+describe('ping', () => {
+
+  it('should be text', () => {
+    return chai.request(app).get('/ping')
+    .then((res) => {
+      expect(res.type).to.eql('text/html')
+    })
+  })
+
+  it('should return pong', () => {
+    return chai.request(app).get('/ping')
+    .then((res) => {
+      expect((res as any).text).to.eql('pong')
     })
   })
 

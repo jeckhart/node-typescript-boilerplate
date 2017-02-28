@@ -1,5 +1,5 @@
 
-import { Express, Request, Response } from 'express'
+import { Application, Request, Response } from 'express'
 
 /**
  * Generate an error response
@@ -12,7 +12,7 @@ function handler (err: Error, req: Request, res: Response, next: Function, inclu
   })
 }
 
-export function registerErrorHandlers(app: Express) {
+export function registerErrorHandlers(app: Application) {
   app.use(NotFound)
 
   if (app.get('env') === 'development') {
